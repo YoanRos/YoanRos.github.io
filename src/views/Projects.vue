@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { projects } from '@/Utils'
 import IconChevronRight from '~icons/mdi/chevron-right'
+import IconChevronLeft from '~icons/mdi/chevron-left'
 
 const router = useRouter()
 const selectedProject = ref(null)
@@ -40,12 +41,21 @@ function goToProject(project) {
         {{ selectedProject.title }}
       </h2>
       <p class="text-2xl text-center text-soft-pink p-4">{{ selectedProject.description }}</p>
-      <button
-        @click="goToProject(selectedProject)"
-        class="mt-4 bg-light-peach hover:bg-soft-pink rounded-lg p-2 text-soft-pink flex items-center transition-colors"
-      >
-        Go to Project Page <IconChevronRight class="ml-1" />
-      </button>
+      <div class="flex justify-between align-bottom w-full">
+        <button
+          @click="showProject(null)"
+          class="mt-4 bg-light-peach hover:bg-soft-pink rounded-lg p-2 text-soft-pink flex items-center transition-colors"
+        >
+          <IconChevronLeft class="mr-1" />
+          Read Less
+        </button>
+        <button
+          @click="goToProject(selectedProject)"
+          class="mt-4 bg-light-peach hover:bg-soft-pink rounded-lg p-2 text-soft-pink flex items-center transition-colors"
+        >
+          Go to Project Page <IconChevronRight class="ml-1" />
+        </button>
+      </div>
     </div>
   </div>
 </template>
