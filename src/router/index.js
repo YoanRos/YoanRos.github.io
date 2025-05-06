@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Projects from '../views/Projects.vue'
-import Oz from '../views/Oz.vue'
+import Oz from '../views/Projects/Oz.vue'
 
 const routes = [
   {
