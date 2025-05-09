@@ -1,38 +1,17 @@
 <script setup>
 import Projects from '../components/Projects.vue'
+import NavBar from '@/components/NavBar.vue'
 import { ref } from 'vue'
 
-const showMenu = ref(true)
+const showMenu = ref(false)
 </script>
 <template>
-  <div class="flex">
-    <nav class="px-6">
-      <div class="flex items-center justify-between">
-        <div class="flex md:hidden">
-          <button
-            @click="showMenu = !showMenu"
-            type="button"
-            class="text-gray-800 bg-white hover:text-gray-400 focus:outline-none focus:text-gray-400"
-          >
-            <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
-              <path
-                fill-rule="evenodd"
-                d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-              ></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-      <ul :class="showMenu ? 'flex' : 'hidden'" class="flex-col items-start mt-8 gap-8">
-        <li class="menu-button"><a href="#">Home</a></li>
-        <li class="menu-button"><a href="#work" v-smooth-scroll>Projects I contributed to</a></li>
-        <li class="menu-button">
-          <a href="#experience" v-smooth-scroll>Experience</a>
-        </li>
-        <li class="menu-button"><a href="#about" v-smooth-scroll>About</a></li>
-      </ul>
-    </nav>
-    <div>
+  <div class="flex bg-light-peach">
+    <NavBar v-model:showMenu="showMenu" />
+    <div
+      :class="[showMenu ? 'pl-44 md:pl-36' : 'pl-8 md:pl-46']"
+      class="flex-1 bg-light-peach transition-all"
+    >
       <div class="banner-1">
         <div class="flex flex-col gap-2">
           <img
