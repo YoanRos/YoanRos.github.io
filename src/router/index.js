@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Projects from '../views/Projects.vue'
 import Oz from '../views/Projects/Oz.vue'
+import Welcome from '@/views/Welcome.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'Projects',
-    component: Projects,
+    name: 'Welcome',
+    component: Welcome,
   },
   {
     path: '/oz',
