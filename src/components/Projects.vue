@@ -31,17 +31,15 @@ const technologyIcons = {
   <div class="p-4 flex flex-col">
     <!-- <h1 class="text-4xl text-center text-soft-pink p-6 font-radiate">My Projects</h1> -->
     <div
-      class="grid grid-cols-2 gap-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 sm:gap-2 md:gap-4 lg:gap-8 auto-rows-fr"
+      class="grid grid-cols-2 gap-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 sm:gap-2 md:gap-4 lg:gap-8"
     >
       <div
         v-for="project in projects"
         :key="project.id"
         class="bg-soft-pink hover:bg-light-peach rounded-lg flex flex-row gap-2 p-4 transition-transform transform hover:scale-105 sm:hover:scale-115 md:hover:scale-125 lg:hover:scale-135 group aspect-square flex-wrap"
       >
-        <div
-          class="flex flex-col justify-between align-middle w-full group-hover:hidden aspect-square"
-        >
-          <span class="text-white text-md md:text-md lg:text-2xl font-semibold font-radiate">{{
+        <div class="flex flex-col justify-between align-middle w-full group-hover:hidden">
+          <span class="text-white text-md md:text-md lg:text-2xl font-radiate">{{
             project.title
           }}</span>
           <div class="h-full w-full flex align-middle justify-center aspect-square p-8">
@@ -71,12 +69,10 @@ const technologyIcons = {
         </div>
         <div class="gap-2 justify-between hidden flex-col group-hover:flex">
           <div class="flex flex-col gap-2 mt-2">
-            <span class="text-white text-base md:text-md lg:text-xl font-semibold font-radiate">{{
+            <span class="text-white text-base md:text-md lg:text-xl font-radiate">{{
               project.title
             }}</span>
-            <span class="text-white text-sm md:text-sm lg:text-lg font-semibold">{{
-              project.description
-            }}</span>
+            <span class="text-white text-sm md:text-sm lg:text-lg">{{ project.description }}</span>
           </div>
           <div class="flex flex-row justify-between gap-2">
             <div class="flex gap-1 md:gap-2 mt-2">

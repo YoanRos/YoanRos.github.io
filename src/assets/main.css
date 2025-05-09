@@ -24,16 +24,6 @@
   src: url('/fonts/radiatesans-bold.otf') format('opentype');
 }
 
-@font-face {
-  font-family: Symbiosis;
-  font-display: auto;
-  font-style: normal;
-  font-weight: 200 700;
-  src:
-    url('/fonts/Symbiosis.ttf') format('truetype'),
-    url('/fonts/Symbiosis.otf') format('opentype');
-}
-
 .banner-1 {
   @apply px-5  pt-5 md:pt-10 lg:px-24 md:px-16 bg-light-peach;
 }
@@ -41,38 +31,7 @@
 .banner-2 {
   @apply px-5  pt-5 md:pt-10 lg:px-24 md:px-16 bg-cream;
 }
-.bg-yellowis {
-  background-color: #ffddbf;
-}
-.hello-button {
-  background-color: #ffddbf;
-}
-.menu-button {
-  @apply lg:text-xl md:text-xl text-white font-bold font-work_sans hover:text-black;
-}
-
-.submit-button {
-  @apply border-gray-800   lg:text-xl md:text-xl text-xs py-2 px-4  lg:py-4 lg:px-8 rounded-2xl font-work_sans font-semibold;
-}
 
 .heading3 {
-  color: #403930;
-  @apply md:text-5xl text-xl font-bold font-work_sans tracking-wide;
-}
-
-.project-title {
-  @apply text-gray-700 text-3xl md:text-4xl font-work_sans tracking-wide font-bold;
-}
-
-.card {
-  @apply bg-white rounded-2xl md:flex place-items-center my-20 shadow-md;
-}
-.card-image {
-  @apply md:w-1/2 md:rounded-r-2xl md:rounded-l-none rounded-b-2xl flex;
-}
-
-@layer utilities {
-  .h-850 {
-    height: 900px;
-  }
+  @apply md:text-5xl text-xl font-bold font-work_sans tracking-wide text-soft-pink;
 }
