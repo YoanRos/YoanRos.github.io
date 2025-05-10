@@ -51,10 +51,12 @@ const showMenu = ref(false)
         </div>
       </div>
       <div class="banner-2 pb-4" id="about">
-        <h3 class="heading3 my-5">Let’s work together and make some impactfull tech</h3>
-        <a class="text-2xl text-lavender font-work_sans">my email: yoanroszak@gmail.com</a>
+        <div class="flex flex-col gap-8 "">
+          <h3 class="heading3 my-5">Let’s work together and make some impactfull tech</h3>
+          <a class="text-2xl text-lavender font-work_sans">my email: yoanroszak@gmail.com</a>
+        </div>
 
-        <div class="flex flex-wrap justify-end gap-2">
+        <div class="flex flex-wrap gap-2 justify-end">
           <a
             href="https://www.linkedin.com/in/yoan-roszak/"
             target="_blank"
