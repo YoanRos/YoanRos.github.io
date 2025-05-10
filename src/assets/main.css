@@ -12,6 +12,7 @@
   --color-lavender: oklch(0.65 0.15 280);
   --color-dark-lavender: oklch(0.55 0.15 280);
   --font-radiate: 'Radiatesans', 'bold';
+  --font-radiate-regular: 'Radiatesans', 'regular';
   --font-escar: 'Escar', 'sans';
   --font-work_sans: 'Work+Sans', 'sans-serif';
 }
@@ -24,12 +25,20 @@
   src: url('/fonts/radiatesans-bold.otf') format('opentype');
 }
 
+@font-face {
+  font-family: Radiatesans;
+  font-display: auto;
+  font-style: normal;
+  font-weight: 200 700;
+  src: url('/fonts/radiatesans-regular.otf') format('opentype');
+}
+
 .banner-1 {
-  @apply px-5  pt-5 md:pt-10 lg:px-24 md:px-16 bg-light-peach;
+  @apply px-5  pt-5 md:pt-10 lg:px-24 md:px-16 bg-gray-200;
 }
 
 .banner-2 {
-  @apply px-5  pt-5 md:pt-10 lg:px-24 md:px-16 bg-cream;
+  @apply px-5  pt-5 md:pt-10 lg:px-24 md:px-16 bg-gray-300;
 }
 
 .heading3 {

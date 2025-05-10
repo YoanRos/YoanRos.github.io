@@ -6,15 +6,16 @@ import { ref } from 'vue'
 import IconGitHub from '~icons/mdi/github'
 import IconMastodon from '~icons/mdi/mastodon'
 import IconLinkedin from '~icons/mdi/linkedin'
+import CV from '@/components/Resume/CV.vue'
 
 const showMenu = ref(false)
 </script>
 <template>
-  <div class="flex bg-light-peach">
+  <div class="flex bg-gray-200">
     <NavBar v-model:showMenu="showMenu" />
     <div
       :class="[showMenu ? 'pl-44 md:pl-36' : 'pl-8 md:pl-36']"
-      class="flex-1 bg-light-peach transition-all"
+      class="flex-1 bg-gray-200 transition-all"
     >
       <div class="banner-1 pb-8">
         <div class="flex flex-col gap-2">
@@ -37,6 +38,7 @@ const showMenu = ref(false)
             a Full Stack Developer
           </h1>
         </div>
+        <CV />
       </div>
       <div class="banner-2 space-y-10 pb-20" id="work">
         <h3 class="heading3 my-5">Projects I contributed to</h3>
