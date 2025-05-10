@@ -75,7 +75,7 @@ const technologyIcons = {
             <span class="text-white text-sm md:text-sm lg:text-lg">{{ project.description }}</span>
           </div>
           <div class="flex flex-row justify-between gap-2">
-            <div class="flex gap-1 md:gap-2 mt-2">
+            <div class="flex gap-1 md:gap-2 mt-2 flex-wrap">
               <template v-for="tech in project.technologies" :key="tech">
                 <button
                   @click="openTechnologyUrl(tech)"
