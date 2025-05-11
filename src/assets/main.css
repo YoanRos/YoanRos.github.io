@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Eczar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap"');
 @import './base.css';
 @import 'tailwindcss';
 
@@ -11,10 +11,18 @@
   --color-dark-mint-green: oklch(0.5 0.1 155);
   --color-lavender: oklch(0.65 0.15 280);
   --color-dark-lavender: oklch(0.55 0.15 280);
+  --color-light-purple: #cb99c9;
+  --color-light-pink: #f6b8d0;
+  --color-old-white: #efede5;
+  --color-eminence: #6c3082;
   --font-radiate: 'Radiatesans', 'bold';
   --font-radiate-regular: 'Radiatesans', 'regular';
-  --font-escar: 'Escar', 'sans';
+  --font-kavoon: 'Kavoon';
   --font-work_sans: 'Work+Sans', 'sans-serif';
+  --font-bonbon: 'Bonbon', 'regular';
+  --font-rugeboogie: 'RugeBoogie', 'regular';
+  --font-symbiosis: 'Symbiosis', 'regular';
+  --font-groovy-orange: 'Groovy';
 }
 
 @font-face {
@@ -26,6 +34,22 @@
 }
 
 @font-face {
+  font-family: Symbiosis;
+  font-display: auto;
+  font-style: normal;
+  font-weight: 200 700;
+  src: url('/fonts/Symbiosis.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Groovy;
+  font-display: auto;
+  font-style: normal;
+  font-weight: 200 700;
+  src: url('/fonts/groovy_orange.otf') format('opentype');
+}
+
+@font-face {
   font-family: Radiatesans;
   font-display: auto;
   font-style: normal;
@@ -33,14 +57,21 @@
   src: url('/fonts/radiatesans-regular.otf') format('opentype');
 }
 
-.banner-1 {
-  @apply px-5  pt-5 md:pt-10 lg:px-24 md:px-16 bg-gray-200;
+@font-face {
+  font-family: Bonbon;
+  font-display: auto;
+  font-weight: 200 700;
+  src: url('/fonts/Bonbon-Regular.ttf') format('truetype');
 }
 
-.banner-2 {
-  @apply px-5  pt-5 md:pt-10 lg:px-24 md:px-16 bg-gray-200;
+@font-face {
+  font-family: RugeBoogie;
+  font-display: auto;
+  font-style: normal;
+  font-weight: 200 700;
+  src: url('/fonts/RugeBoogie-Regular.ttf') format('truetype');
 }
 
 .heading3 {
-  @apply md:text-5xl text-xl font-bold font-work_sans tracking-wide text-soft-pink;
+  @apply md:text-5xl text-xl font-bold font-radiate-regular tracking-wide text-light-pink;
 }

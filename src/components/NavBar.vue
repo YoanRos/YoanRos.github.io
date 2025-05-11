@@ -15,13 +15,13 @@ function toggleMenu() {
 </script>
 
 <template>
-  <nav class="bg-lavender text-white p-2 md:p-4 fixed h-full">
+  <nav class="bg-light-purple text-white p-2 md:p-4 fixed h-full">
     <div class="container mx-auto flex-col justify-between items-center">
       <ul class="hidden md:flex flex-col gap-10">
         <li>
           <a
             href="#"
-            class="flex items-center gap-3 px-4 py-3 text-xl hover:bg-dark-lavender transition-colors duration-200 rounded-md"
+            class="flex items-center gap-3 px-4 py-3 text-xl hover:bg-eminence transition-colors duration-200 rounded-md"
           >
             <IconHome class="w-5 h-5" />
             <span>Home</span>
@@ -30,7 +30,7 @@ function toggleMenu() {
         <li>
           <a
             href="#work"
-            class="flex items-center gap-3 px-4 py-3 text-xl hover:bg-dark-lavender transition-colors duration-200 rounded-md"
+            class="flex items-center gap-3 px-4 py-3 text-xl hover:bg-eminence transition-colors duration-200 rounded-md"
           >
             <IconProjects class="w-5 h-5" />
             <span>Projects</span>
@@ -39,7 +39,7 @@ function toggleMenu() {
         <li>
           <a
             href="#experience"
-            class="flex items-center gap-3 px-4 py-3 text-xl hover:bg-dark-lavender transition-colors duration-200 rounded-md"
+            class="flex items-center gap-3 px-4 py-3 text-xl hover:bg-eminence transition-colors duration-200 rounded-md"
           >
             <IconExperience class="w-5 h-5" />
             <span>Experience</span>
@@ -48,7 +48,7 @@ function toggleMenu() {
         <li>
           <a
             href="#about"
-            class="flex items-center gap-3 px-4 py-3 text-xl hover:bg-dark-lavender transition-colors duration-200 rounded-md"
+            class="flex items-center gap-3 px-4 py-3 text-xl hover:bg-eminence transition-colors duration-200 rounded-md"
           >
             <IconAbout class="w-5 h-5" />
             <span>About</span>
@@ -73,12 +73,12 @@ function toggleMenu() {
       </button>
     </div>
 
-    <div v-if="showMenu" class="md:hidden bg-lavender text-white p-2">
+    <div v-if="showMenu" class="md:hidden bg-eminence text-white p-2">
       <ul class="flex flex-col gap-10">
         <li>
           <a
             href="#"
-            class="flex items-center gap-3 px-4 py-3 text-lg hover:bg-dark-lavender transition-colors duration-200 rounded-md"
+            class="flex items-center gap-3 px-4 py-3 text-lg hover:bg-light-purple transition-colors duration-200 rounded-md"
           >
             <IconHome class="w-4 h-4" />
             <span>Home</span>
@@ -87,7 +87,7 @@ function toggleMenu() {
         <li>
           <a
             href="#work"
-            class="flex items-center gap-3 px-4 py-3 text-lg hover:bg-dark-lavender transition-colors duration-200 rounded-md"
+            class="flex items-center gap-3 px-4 py-3 text-lg hover:bg-light-purple transition-colors duration-200 rounded-md"
           >
             <IconProjects class="w-4 h-4" />
             <span>Projects</span>
@@ -96,7 +96,7 @@ function toggleMenu() {
         <li>
           <a
             href="#experience"
-            class="flex items-center gap-3 px-4 py-3 text-lg hover:bg-dark-lavender transition-colors duration-200 rounded-md"
+            class="flex items-center gap-3 px-4 py-3 text-lg hover:bg-light-purple transition-colors duration-200 rounded-md"
           >
             <IconExperience class="w-4 h-4" />
             <span>Experience</span>
@@ -105,7 +105,7 @@ function toggleMenu() {
         <li>
           <a
             href="#about"
-            class="flex items-center gap-3 px-4 py-3 text-lg hover:bg-dark-lavender transition-colors duration-200 rounded-md"
+            class="flex items-center gap-3 px-4 py-3 text-lg hover:bg-light-purple transition-colors duration-200 rounded-md"
           >
             <IconAbout class="w-4 h-4" />
             <span>About</span>

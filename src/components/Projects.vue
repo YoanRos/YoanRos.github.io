@@ -29,14 +29,14 @@ const technologyIcons = {
 
 <template>
   <div class="p-4 flex flex-col">
-    <!-- <h1 class="text-4xl text-center text-soft-pink p-6 font-radiate">My Projects</h1> -->
+    <!-- <h1 class="text-4xl text-center text-nibg-light-pink p-6 font-radiate">My Projects</h1> -->
     <div
       class="grid grid-cols-2 gap-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 sm:gap-2 md:gap-4 lg:gap-8"
     >
       <div
         v-for="project in projects"
         :key="project.id"
-        class="bg-soft-pink hover:bg-light-peach rounded-lg flex flex-row gap-2 p-4 transition-transform transform hover:scale-105 sm:hover:scale-115 md:hover:scale-125 lg:hover:scale-135 group aspect-square flex-wrap"
+        class="bg-light-pink hover:bg-light-purple rounded-lg flex flex-row gap-2 p-4 transition-transform transform hover:scale-105 sm:hover:scale-115 md:hover:scale-125 lg:hover:scale-135 group aspect-square flex-wrap"
       >
         <div class="flex flex-col justify-between align-middle w-full group-hover:hidden">
           <span class="text-white text-md md:text-md lg:text-2xl font-radiate">{{

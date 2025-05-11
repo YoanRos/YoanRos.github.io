@@ -16,7 +16,7 @@ function downloadPDF() {
 
 <template>
   <button
-    class="flex items-center gap-3 px-4 py-3 text-xl text-white font-radiate-regular bg-lavender hover:bg-dark-lavender transition-colors duration-200 rounded-md mt-8"
+    class="flex items-center gap-3 px-4 py-3 text-xl text-white font-radiate-regular bg-light-purple hover:bg-eminence transition-colors duration-200 rounded-md mt-8"
     @click="downloadPDF"
   >
     Download My Resume
