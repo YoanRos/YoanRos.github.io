@@ -17,7 +17,7 @@ export const projects = ref([
     description:
       'Web application focusing on clearing companies employees career paths. Promoted to Lead Developer, I managed the support, project specifications, roadmap, and client communication to ensure successful project delivery and alignment with client expectations.',
     pageName: 'Jobmaker',
-    logoUrl: 'logos/logo_jobmaker.png',
+    logoUrl: 'logos/jobmaker.png',
     link: 'https://jobmaker.fr/',
     technologies: ['React', 'MongoDB', 'AWS'],
   },
@@ -42,11 +42,11 @@ export const projects = ref([
   },
   {
     id: 5,
-    title: 'Maison Mat',
+    title: 'Maison Matrimoniale',
     description:
       'Social mobile app developed for gay men looking for true relationships. Contributed to new features and improvements as a Full Stack Developer, focusing on delivering high-quality, user-centered solutions.',
     pageName: 'MaisonMat',
-    logoUrl: 'logos/logo_maison_matrimoniale.png',
+    logoUrl: 'logos/maisonMat.png',
     link: 'https://maisonmatrimoniale.com/',
     technologies: ['React Native', 'Firebase'],
   },
@@ -56,7 +56,7 @@ export const projects = ref([
     description:
       'Internal web app of Selego, regrouping plenty of accounting features. Developed accounting features and integrated third-party services, ensuring the project adhered to best practices in software development.',
     pageName: 'Accounting',
-    logoUrl: 'logos/logo_accounting.png',
+    logoUrl: 'logos/accounting.png',
     technologies: ['React', 'MongoDB', 'CleverCloud'],
   },
   {

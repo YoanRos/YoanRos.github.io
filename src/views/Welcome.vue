@@ -18,7 +18,7 @@ const showMenu = ref(false)
     <div class="flex h-screen p-16">
       <div class="flex items-end">
         <h1
-          class="lg:text-9xl md:text-3xl sm:text-xl text-lg font-groovy-orange leading-tight font-bold text-light-pink"
+          class="lg:text-7xl md:text-7xl sm:text-6xl 2xl:text-9xl xl:text-8xl text-6xl font-groovy-orange leading-tight font-bold text-light-pink"
         >
           Goededag ! <br />I am
           <a
@@ -36,15 +36,12 @@ const showMenu = ref(false)
           <span class="text-light-purple">Amsterdam</span>
         </h1>
       </div>
-      <div class="w-1/3">
+      <div class="absolute top-0 right-0 xl:w-2/5 w-1/3">
         <AnimatedFlower />
       </div>
     </div>
-    <div class="flex">
-      <CV />
-    </div>
-    <div class="banner-2 space-y-10 pb-20" id="work">
-      <h3 class="heading3 my-5">Projects I contributed to</h3>
+    <div class="flex h-screen p-16 flex-col justify-between" id="work">
+      <h3 class="heading3">Projects I contributed to</h3>
       <Projects />
     </div>
     <div class="" id="experience">
