@@ -4,6 +4,7 @@ export const projects = ref([
   {
     id: 1,
     title: 'Oz Ensemble',
+    type: 'Mobile App',
     description:
       'Mobile application designed to help users handle their alcohol consumption. As a Full Stack Developer at Selego, I was responsible for overseeing the end-to-end development of this project, focusing on client communication and project specifications.',
     pageName: 'Oz',
@@ -14,6 +15,7 @@ export const projects = ref([
   {
     id: 2,
     title: 'Jobmaker',
+    type: 'Web App',
     description:
       'Web application focusing on clearing companies employees career paths. Promoted to Lead Developer, I managed the support, project specifications, roadmap, and client communication to ensure successful project delivery and alignment with client expectations.',
     pageName: 'Jobmaker',
@@ -24,6 +26,7 @@ export const projects = ref([
   {
     id: 3,
     title: 'Zurban',
+    type: 'Mobile App',
     description:
       'Mobile app to reorganize your contacts from all your sources. Spearheaded the creation of this R&D initiative for managing contacts, leading the communication with the client and coordinating development efforts with a team of developers.',
     pageName: 'Zurban',
@@ -33,6 +36,7 @@ export const projects = ref([
   {
     id: 4,
     title: 'PetClub',
+    type: 'Mobile App',
     description:
       'Social mobile app allowing pets to socialize. Defined the project roadmap and prepared client billing, ensuring smooth execution and timely invoicing as part of my role as a Full Stack Developer.',
     pageName: 'PetClub',
@@ -43,6 +47,7 @@ export const projects = ref([
   {
     id: 5,
     title: 'Maison Matrimoniale',
+    type: 'Mobile App',
     description:
       'Social mobile app developed for gay men looking for true relationships. Contributed to new features and improvements as a Full Stack Developer, focusing on delivering high-quality, user-centered solutions.',
     pageName: 'MaisonMat',
@@ -53,6 +58,7 @@ export const projects = ref([
   {
     id: 6,
     title: 'Accounting',
+    type: 'Web App',
     description:
       'Internal web app of Selego, regrouping plenty of accounting features. Developed accounting features and integrated third-party services, ensuring the project adhered to best practices in software development.',
     pageName: 'Accounting',
@@ -61,13 +67,30 @@ export const projects = ref([
   },
   {
     id: 7,
+    title: 'Osane',
+    type: 'WordPress website',
+    description: 'Wordpress website hosted on IONOS.',
+    pageName: 'Osane',
+    logoUrl: 'logos/logo_osane.png',
+    technologies: ['Wordpress', 'PHP', 'JQuery'],
+  },
+  {
+    id: 8,
     title: 'Emeis',
+    type: 'Web App',
     description:
       'Web app featuring AI to treat admin documents. Helped on the project to develop new features, focusing on creating user-friendly and accessible software as part of my role as a Full Stack Developer.',
     pageName: 'Emeis',
     logoUrl: 'logos/logo_emeis.png',
     link: 'https://www.selego.co/en/use-cases/ia-generative-conformite-contrats',
     technologies: ['React', 'MongoDB', 'CleverCloud'],
+  },
+  {
+    id: 9,
+    title: 'Renting App',
+    type: 'Web App',
+    logoUrl: 'logos/logo_rent_app.png',
+    technologies: ['PowerApps', 'Sharepoint'],
   },
 ])
 

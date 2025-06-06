@@ -36,6 +36,10 @@ const nextPage = () => {
   }
 }
 
+const updatePageIndex = (index) => {
+  pageIndex.value = index
+}
+
 const currentPageProjects = computed(() => {
   const start = pageIndex.value * pageSize.value
   let end = start + pageSize.value
@@ -57,7 +61,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="flex items-center justify-center">
+  <div class="flex items-center justify-center flex-col gap-8">
     <div class="flex flex-row justify-between items-center w-full">
       <button @click="previousPage()" class="p-2">
         <IconChevronLeft
@@ -65,40 +69,45 @@ onUnmounted(() => {
         />
       </button>
 
-      <div class="flex flex-row gap-20 p-4 justify-center">
-        <div
-          v-for="project in currentPageProjects"
-          :key="project.id"
-          class="flex flex-col items-center"
-          :class="{ 'w-2/3': currentPageProjects.length === 1 }"
-        >
-          <div class="rounded-lg transition-transform transform shadow-lg w-full hover:scale-110">
-            <div class="h-full w-full flex bg-gradient-to-tr relative">
-              <img
-                :src="project.logoUrl"
-                :alt="`logo ${project.title}`"
-                class="rounded-lg object-cover w-full h-full"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t hover:from-black/40 from-black/50 to-transparent rounded-lg"
-              ></div>
-              <div
-                class="text-white flex flex-col justify-start w-full absolute bottom-0 gap-2 p-2"
-              >
-                <span class="font-bold text-lg">
-                  {{ project.title }}
-                </span>
+      <Transition name="carouselTransition" mode="out-in">
+        <div class="flex flex-row gap-20 p-4 justify-center w-full" :key="pageIndex">
+          <div
+            v-for="project in currentPageProjects"
+            :key="project.id"
+            class="flex flex-col items-center"
+          >
+            <div class="rounded-lg shadow-lg w-full hover:scale-110">
+              <div class="h-full w-full flex bg-gradient-to-tr relative">
+                <img
+                  :src="project.logoUrl"
+                  :alt="`logo ${project.title}`"
+                  class="rounded-lg object-cover w-full h-full"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t hover:from-black/40 from-black/50 to-transparent rounded-lg"
+                ></div>
+                <div
+                  class="text-white flex flex-col justify-start w-full absolute bottom-0 gap-1 p-2"
+                >
+                  <span class="font-extrabold font-symbiosis text-lg text-light-pink">
+                    {{ project.type }}
+                  </span>
 
-                <div class="flex flex-row">
-                  <div v-for="techno in project.technologies" :key="techno.id" class="">
-                    <span>{{ ' ' + techno }}, </span>
+                  <span class="text-lg">
+                    {{ project.title }}
+                  </span>
+
+                  <div class="flex flex-row gap-1">
+                    <div v-for="techno in project.technologies" :key="techno.id" class="">
+                      <span>{{ techno }}, </span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </Transition>
 
       <button @click="nextPage()" class="p-2">
         <IconChevronRight
@@ -106,5 +115,43 @@ onUnmounted(() => {
         />
       </button>
     </div>
+    <div class="flex gap-2">
+      <button
+        v-for="index in pageNumber"
+        :key="index"
+        class="rounded-full p-3 border-2 border-light-pink hover:bg-light-purple text-black"
+        :class="{ 'bg-light-pink ': index === pageIndex + 1, 'bg-white': index - 1 !== pageIndex }"
+        @click="updatePageIndex(index - 1)"
+      ></button>
+    </div>
   </div>
 </template>
+
+<style>
+.carouselTransition-enter-active,
+.carouselTransition-leave-active {
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.carouselTransition-enter-from {
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+.carouselTransition-enter-to {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.carouselTransition-leave-from {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.carouselTransition-leave-to {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+</style>

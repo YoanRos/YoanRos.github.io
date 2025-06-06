@@ -35,7 +35,6 @@ onUnmounted(() => {
 </template>
 
 <style>
-/* Define the transition styles */
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 1s;
