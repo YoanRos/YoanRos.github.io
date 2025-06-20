@@ -3,10 +3,6 @@ import Projects from '../components/Projects.vue'
 import NavBar from '@/components/NavBar.vue'
 import { ref } from 'vue'
 
-import IconGitHub from '~icons/mdi/github'
-import IconMastodon from '~icons/mdi/mastodon'
-
-import IconLinkedin from '~icons/mdi/linkedin'
 import CV from '@/components/Resume/CV.vue'
 import AnimatedFlower from '@/components/animations/AnimatedFlower.vue'
 import GetInTouch from '@/components/animations/GetInTouch.vue'
