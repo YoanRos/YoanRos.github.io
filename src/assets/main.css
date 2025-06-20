@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap"');
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap');
 @import './base.css';
 @import 'tailwindcss';
 
@@ -17,7 +18,7 @@
   --color-eminence: #6c3082;
   --font-radiate: 'Radiatesans', 'bold';
   --font-radiate-regular: 'Radiatesans', 'regular';
-  --font-kavoon: 'Kavoon';
+  --font-mrsSaint: 'Mrs+Saint+Delafield', 'cursive';
   --font-work_sans: 'Work+Sans', 'sans-serif';
   --font-bonbon: 'Bonbon', 'regular';
   --font-rugeboogie: 'RugeBoogie', 'regular';

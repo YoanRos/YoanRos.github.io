@@ -20,17 +20,15 @@ onUnmounted(() => {
 
 <template>
   <transition name="fade" class="">
-    <div class="">
-      <img
-        v-if="showImage"
-        src="/fleur stylisée.svg"
-        alt="Fleur Stylisée"
-        class=""
-        :style="{
-          transform: `rotate(${scrollPosition / 10}deg) translateY(${-scrollPosition / 20}px)`,
-        }"
-      />
-    </div>
+    <img
+      v-if="showImage"
+      src="/fleur stylisée.svg"
+      alt="Fleur Stylisée"
+      class=""
+      :style="{
+        transform: `rotate(${scrollPosition / 10}deg) translateY(${-scrollPosition / 20}px)`,
+      }"
+    />
   </transition>
 </template>
 
