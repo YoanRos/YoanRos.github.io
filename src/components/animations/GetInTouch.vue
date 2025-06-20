@@ -1,52 +1,61 @@
 <script setup>
 import IconGitHub from '~icons/mdi/github'
 import IconMastodon from '~icons/mdi/mastodon'
-
 import IconLinkedin from '~icons/mdi/linkedin'
 </script>
 
 <template>
   <div class="relative h-screen overflow-hidden bg-white">
-    <div class="flex whitespace-nowrap animate-marquee absolute">
-      <span class="text-light-pink text-[40rem] xl:text-[50rem] font-mrsSaint pr-16">
+    <div class="h-full whitespace-nowrap animate-marquee absolute bottom-0">
+      <span
+        class="text-light-pink text-[20rem] md:text-[40rem] xl:text-[50rem] font-mrsSaint pr-8 md:pr-16"
+      >
         GET IN TOUCH GET IN TOUCH GET IN TOUCH GET IN TOUCH
       </span>
-      <span class="text-light-pink text-[40rem] xl:text-[50rem] font-mrsSaint pr-16">
+      <span
+        class="text-light-pink text-[20rem] md:text-[40rem] xl:text-[50rem] font-mrsSaint pr-8 md:pr-16"
+      >
         GET IN TOUCH GET IN TOUCH GET IN TOUCH GET IN TOUCH
       </span>
     </div>
 
     <div>
       <img src="/arc2.svg" alt="arc" class="absolute bottom-0 w-full" />
-      <div class="z-10 absolute bottom-1/6 flex justify-center items-center w-full flex-col gap-4">
-        <span class="font-bold font-radiate-regular text-2xl text-white">
+      <div
+        class="z-10 absolute bottom-0 md:bottom-1/6 flex justify-center items-center w-full flex-col gap-2 md:gap-4"
+      >
+        <span class="font-bold font-radiate-regular text-lg md:text-2xl text-white text-center">
           If you want to reach me out please send me an email
         </span>
-        <a href="mailto:yoanroszak@gmail.com" class="text-2xl text-white"> yoanroszak@gmail.com </a>
-        <span class="font-bold font-radiate-regular text-2xl text-white"> Or lets be social </span>
+        <a href="mailto:yoanroszak@gmail.com" class="text-lg md:text-2xl text-white"
+          >yoanroszak@gmail.com</a
+        >
+        <span class="font-bold font-radiate-regular text-lg md:text-2xl text-white text-center">
+          Or let s be social
+        </span>
 
-        <div class="flex flex-wrap gap-3 justify-end">
+        <div class="flex flex-wrap gap-2 md:gap-3 justify-center">
           <a
             href="https://www.linkedin.com/in/yoan-roszak/"
             target="_blank"
-            class="bg-light-purple p-3 text-white rounded-lg hover:bg-eminence transition-colors"
+            class="bg-light-purple p-2 md:p-3 text-white rounded-lg hover:bg-eminence transition-colors"
           >
-            <IconLinkedin class="w-6 h-6 md:w-10 md:h-10" />
+            <IconLinkedin class="w-4 h-4 md:w-6 md:h-6 lg:w-10 lg:h-10" />
           </a>
           <a
             href="https://github.com/YoanRos"
             target="_blank"
-            class="bg-light-purple p-3 text-white rounded-lg hover:bg-eminence transition-colors"
+            class="bg-light-purple p-2 md:p-3 text-white rounded-lg hover:bg-eminence transition-colors"
           >
-            <IconGitHub class="w-6 h-6 md:w-10 md:h-10" />
+            <IconGitHub class="w-4 h-4 md:w-6 md:h-6 lg:w-10 lg:h-10" />
           </a>
 
           <a
             href="https://mastodon.social/@yoros"
             target="_blank"
-            class="bg-light-purple p-3 text-white rounded-lg hover:bg-eminence transition-colors"
+            class="bg-light-purple p-2 md:p-3 text-white rounded-lg hover:bg-eminence transition-colors"
           >
-            <IconMastodon class="w-6 h-6 md:w-10 md:h-10" />
+            <IconMastodon class="w-4 h-4 md:w-6 md:h-6 lg:w-10 lg:h-10" />
           </a>
         </div>
       </div>
@@ -63,7 +72,20 @@ import IconLinkedin from '~icons/mdi/linkedin'
     transform: translateX(-50%);
   }
 }
+
 .animate-marquee {
-  animation: scroll-left 100s linear infinite;
+  animation: scroll-left 50s linear infinite;
+}
+
+@media (min-width: 768px) {
+  .animate-marquee {
+    animation: scroll-left 80s linear infinite;
+  }
+}
+
+@media (min-width: 1280px) {
+  .animate-marquee {
+    animation: scroll-left 100s linear infinite;
+  }
 }
 </style>
