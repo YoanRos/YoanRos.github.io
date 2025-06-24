@@ -30,7 +30,7 @@ export const projects = ref([
     description:
       'Mobile app to reorganize your contacts from all your sources. Spearheaded the creation of this R&D initiative for managing contacts, leading the communication with the client and coordinating development efforts with a team of developers.',
     pageName: 'Zurban',
-    logoUrl: 'logos/logo_zurban.png',
+    logoUrl: 'carouselImages/zurban_carousel.png',
     technologies: ['React Native', 'WatermelonDB'],
   },
   {
@@ -40,7 +40,7 @@ export const projects = ref([
     description:
       'Social mobile app allowing pets to socialize. Defined the project roadmap and prepared client billing, ensuring smooth execution and timely invoicing as part of my role as a Full Stack Developer.',
     pageName: 'PetClub',
-    logoUrl: 'logos/logo_petclub.png',
+    logoUrl: 'carouselImages/zurban_carousel.png',
     link: 'https://petclub.fr/',
     technologies: ['React Native', 'MongoDB'],
   },
@@ -51,7 +51,7 @@ export const projects = ref([
     description:
       'Social mobile app developed for gay men looking for true relationships. Contributed to new features and improvements as a Full Stack Developer, focusing on delivering high-quality, user-centered solutions.',
     pageName: 'MaisonMat',
-    logoUrl: 'logos/maisonMat.png',
+    logoUrl: 'carouselImages/maison_carousel.png',
     link: 'https://maisonmatrimoniale.com/',
     technologies: ['React Native', 'Firebase'],
   },
@@ -62,7 +62,7 @@ export const projects = ref([
     description:
       'Internal web app of Selego, regrouping plenty of accounting features. Developed accounting features and integrated third-party services, ensuring the project adhered to best practices in software development.',
     pageName: 'Accounting',
-    logoUrl: 'logos/accounting.png',
+    logoUrl: 'carouselImages/accounting_carousel.png',
     technologies: ['React', 'MongoDB', 'CleverCloud'],
   },
   {

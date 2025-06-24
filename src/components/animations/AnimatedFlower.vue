@@ -22,8 +22,8 @@ onUnmounted(() => {
   <transition name="fade" class="">
     <img
       v-if="showImage"
-      src="/fleur stylisée.svg"
-      alt="Fleur Stylisée"
+      src="/pinkFlower.svg"
+      alt="Pink FLower"
       class=""
       :style="{
         transform: `rotate(${scrollPosition / 10}deg) translateY(${-scrollPosition / 20}px)`,

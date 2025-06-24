@@ -4,11 +4,13 @@ import { useRouter } from 'vue-router'
 import { projects, technologyUrls, technologyIconUrls } from '@/Utils'
 import IconChevronRight from '~icons/mdi/chevron-right'
 import IconChevronLeft from '~icons/mdi/chevron-left'
+import LoadingFlowers from '@/components/animations/LoadingFlowers.vue'
 
 const router = useRouter()
 const pageSize = ref(3)
 const projectsSize = projects.value.length
 const pageIndex = ref(0)
+const isLoading = ref(false)
 
 const pageNumber = computed(() => Math.ceil(projectsSize / pageSize.value))
 
@@ -21,23 +23,35 @@ const myEventHandler = () => {
 }
 
 const previousPage = () => {
-  if (pageIndex.value > 0) {
-    pageIndex.value--
-  } else {
-    pageIndex.value = pageNumber.value - 1
-  }
+  isLoading.value = true
+  setTimeout(() => {
+    if (pageIndex.value > 0) {
+      pageIndex.value--
+    } else {
+      pageIndex.value = pageNumber.value - 1
+    }
+    isLoading.value = false
+  }, 750)
 }
 
 const nextPage = () => {
-  if (pageIndex.value < pageNumber.value - 1) {
-    pageIndex.value++
-  } else {
-    pageIndex.value = 0
-  }
+  isLoading.value = true
+  setTimeout(() => {
+    if (pageIndex.value < pageNumber.value - 1) {
+      pageIndex.value++
+    } else {
+      pageIndex.value = 0
+    }
+    isLoading.value = false
+  }, 750)
 }
 
 const updatePageIndex = (index) => {
-  pageIndex.value = index
+  isLoading.value = true
+  setTimeout(() => {
+    pageIndex.value = index
+    isLoading.value = false
+  }, 750)
 }
 
 const currentPageProjects = computed(() => {
@@ -61,53 +75,60 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="flex items-center justify-center flex-col gap-8">
-    <div class="flex flex-row justify-between items-center w-full">
+  <div class="flex items-center justify-center flex-col gap-8 h-full">
+    <div class="flex flex-row justify-between items-center w-full h-full">
       <button @click="previousPage()" class="p-2">
         <IconChevronLeft
           class="bg-light-pink hover:bg-light-purple rounded-full text-white text-4xl"
         />
       </button>
 
-      <Transition name="carouselTransition" mode="out-in">
-        <div class="flex flex-row gap-20 p-4 justify-center w-full" :key="pageIndex">
+      <div class="flex justify-center items-center w-full relative">
+        <div v-if="isLoading" class="absolute w-full flex justify-center items-center">
+          <LoadingFlowers />
+        </div>
+        <Transition name="carouselTransition" mode="out-in">
           <div
-            v-for="project in currentPageProjects"
-            :key="project.id"
-            class="flex flex-col items-center"
+            v-if="!isLoading"
+            class="flex flex-row gap-20 p-4 justify-center w-full"
+            :key="pageIndex"
           >
-            <div class="rounded-lg shadow-lg w-full hover:scale-110">
-              <div class="h-full w-full flex bg-gradient-to-tr relative">
-                <img
-                  :src="project.logoUrl"
-                  :alt="`logo ${project.title}`"
-                  class="rounded-lg object-cover w-full h-full"
-                />
-                <div
-                  class="absolute inset-0 bg-gradient-to-t hover:from-black/40 from-black/50 to-transparent rounded-lg"
-                ></div>
-                <div
-                  class="text-white flex flex-col justify-start w-full absolute bottom-0 gap-1 p-2"
-                >
-                  <span class="font-extrabold font-symbiosis text-lg text-light-pink">
-                    {{ project.type }}
-                  </span>
-
-                  <span class="text-lg">
-                    {{ project.title }}
-                  </span>
-
-                  <div class="flex flex-row gap-1">
-                    <div v-for="techno in project.technologies" :key="techno.id" class="">
-                      <span>{{ techno }}, </span>
+            <div
+              v-for="project in currentPageProjects"
+              :key="project.id"
+              class="flex flex-col items-center"
+            >
+              <div class="rounded-lg shadow-lg w-full hover:scale-110">
+                <div class="h-full w-full flex bg-gradient-to-tr relative">
+                  <img
+                    :src="project.logoUrl"
+                    :alt="`logo ${project.title}`"
+                    class="rounded-lg object-cover w-full h-full"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t hover:from-black/40 from-black/50 to-transparent rounded-lg"
+                  ></div>
+                  <div
+                    class="text-white flex flex-col justify-start w-full absolute bottom-0 gap-1 p-2"
+                  >
+                    <span class="font-extrabold font-symbiosis text-lg text-light-pink">
+                      {{ project.type }}
+                    </span>
+                    <span class="text-lg">
+                      {{ project.title }}
+                    </span>
+                    <div class="flex flex-row gap-1">
+                      <div v-for="techno in project.technologies" :key="techno.id" class="">
+                        <span>{{ techno }}, </span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </Transition>
+        </Transition>
+      </div>
 
       <button @click="nextPage()" class="p-2">
         <IconChevronRight
