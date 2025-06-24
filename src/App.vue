@@ -1,7 +1,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
-// Create refs for the cursor elements
 const innerCursor = ref(null)
 const outerCursor = ref(null)
 const elements = ['span', 'h1', 'h2', 'h3', 'a']
@@ -16,7 +15,7 @@ const shrinkCursor = () => {
     innerCursor.value.classList.remove('grow')
   }
 }
-// Function to move the cursor
+
 const moveCursor = (e) => {
   if (innerCursor.value && outerCursor.value) {
     innerCursor.value.style.left = `${e.clientX}px`
@@ -26,7 +25,6 @@ const moveCursor = (e) => {
   }
 }
 
-// Set up the event listener when the component is mounted
 onMounted(() => {
   document.addEventListener('mousemove', moveCursor)
 
@@ -41,7 +39,6 @@ onMounted(() => {
   })
 })
 
-// Clean up the event listener when the component is unmounted
 onUnmounted(() => {
   document.removeEventListener('mousemove', moveCursor)
   elements.forEach((selector) => {
