@@ -34,7 +34,9 @@ const showMenu = ref(false)
       </div>
     </div>
     <div class="flex h-screen p-16 flex-col justify-between" id="work">
-      <h3 class="heading3">Projects I contributed to</h3>
+      <h3 class="md:text-7xl text-4xl font-bold font-radiate-regular tracking-wide text-light-pink">
+        Projects I contributed to
+      </h3>
       <Projects />
     </div>
 

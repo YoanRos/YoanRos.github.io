@@ -13,7 +13,7 @@ const isLoading = ref(false)
 const pageNumber = computed(() => Math.ceil(projectsSize / pageSize.value))
 
 const myEventHandler = () => {
-  if (window.innerWidth < 767) {
+  if (window.innerWidth < 1200) {
     pageSize.value = 2
   } else {
     pageSize.value = 3

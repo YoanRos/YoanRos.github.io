@@ -45,7 +45,3 @@
   font-weight: 200 700;
   src: url('/fonts/radiatesans-regular.otf') format('opentype');
 }
-
-.heading3 {
-  @apply md:text-7xl text-4xl font-bold font-radiate-regular tracking-wide text-light-pink;
-}
