@@ -1,12 +1,10 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
-import { useRouter } from 'vue-router'
-import { projects, technologyUrls, technologyIconUrls } from '@/Utils'
+import { projects } from '@/Utils'
 import IconChevronRight from '~icons/mdi/chevron-right'
 import IconChevronLeft from '~icons/mdi/chevron-left'
 import LoadingFlowers from '@/components/animations/LoadingFlowers.vue'
 
-const router = useRouter()
 const pageSize = ref(3)
 const projectsSize = projects.value.length
 const pageIndex = ref(0)
