@@ -13,7 +13,9 @@ const isLoading = ref(false)
 const pageNumber = computed(() => Math.ceil(projectsSize / pageSize.value))
 
 const myEventHandler = () => {
-  if (window.innerWidth < 767) {
+  if (window.innerWidth < 750) {
+    pageSize.value = 1
+  } else if (window.innerWidth < 1000) {
     pageSize.value = 2
   } else {
     pageSize.value = 3
@@ -88,7 +90,7 @@ onUnmounted(() => {
         <Transition name="carouselTransition" mode="out-in">
           <div
             v-if="!isLoading"
-            class="flex flex-row gap-20 p-4 justify-center w-full"
+            class="flex flex-row gap-2 md:gap-10 lg:gap-20 p-4 justify-center w-full"
             :key="pageIndex"
           >
             <div

@@ -20,9 +20,9 @@ import IconLinkedin from '~icons/mdi/linkedin'
     </div>
 
     <div>
-      <img src="/arc2.svg" alt="arc" class="absolute bottom-0 w-full" />
+      <img src="/arc2.svg" alt="arc" class="absolute xl:-bottom-16 bottom-4 md:bottom-0 w-full" />
       <div
-        class="z-10 absolute bottom-0 md:bottom-1/6 flex justify-center items-center w-full flex-col gap-2 md:gap-4"
+        class="z-10 absolute bottom-0 md:bottom-1 xl:bottom-3 2xl:bottom-1/12 flex justify-center items-center w-full flex-col gap-2 md:gap-4"
       >
         <span class="font-bold font-radiate-regular text-lg md:text-2xl text-white text-center">
           If you want to reach me out please send me an email
@@ -34,7 +34,7 @@ import IconLinkedin from '~icons/mdi/linkedin'
           Or let s be social
         </span>
 
-        <div class="flex flex-wrap gap-2 md:gap-3 justify-center">
+        <div class="flex flex-wrap gap-2 md:gap-3 justify-center bg-light-pink w-full">
           <a
             href="https://www.linkedin.com/in/yoan-roszak/"
             target="_blank"

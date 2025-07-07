@@ -47,5 +47,5 @@
 }
 
 .heading3 {
-  @apply md:text-7xl text-4xl font-bold font-radiate-regular tracking-wide text-light-pink;
+  @apply lg:text-7xl md:text-6xl text-3xl font-bold font-radiate-regular tracking-wide text-light-pink;
 }
