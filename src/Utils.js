@@ -8,7 +8,7 @@ export const projects = ref([
     description:
       'Mobile application designed to help users handle their alcohol consumption. As a Full Stack Developer at Selego, I was responsible for overseeing the end-to-end development of this project, focusing on client communication and project specifications.',
     pageName: 'Oz',
-    logoUrl: 'logos/logo_oz.png',
+    logoUrl: 'carouselImages/oz_carousel.png',
     link: 'https://ozensemble.fabrique.social.gouv.fr/',
     technologies: ['React Native', 'PostgreSQL', 'Prisma'],
   },
@@ -19,7 +19,7 @@ export const projects = ref([
     description:
       'Web application focusing on clearing companies employees career paths. Promoted to Lead Developer, I managed the support, project specifications, roadmap, and client communication to ensure successful project delivery and alignment with client expectations.',
     pageName: 'Jobmaker',
-    logoUrl: 'logos/jobmaker.png',
+    logoUrl: 'carouselImages/jobmaker_carousel.png',
     link: 'https://jobmaker.fr/',
     technologies: ['React', 'MongoDB', 'AWS'],
   },
@@ -40,7 +40,7 @@ export const projects = ref([
     description:
       'Social mobile app allowing pets to socialize. Defined the project roadmap and prepared client billing, ensuring smooth execution and timely invoicing as part of my role as a Full Stack Developer.',
     pageName: 'PetClub',
-    logoUrl: 'carouselImages/zurban_carousel.png',
+    logoUrl: 'carouselImages/petClub_carousel.png',
     link: 'https://petclub.fr/',
     technologies: ['React Native', 'MongoDB'],
   },
@@ -71,7 +71,7 @@ export const projects = ref([
     type: 'WordPress website',
     description: 'Wordpress website hosted on IONOS.',
     pageName: 'Osane',
-    logoUrl: 'logos/logo_osane.png',
+    logoUrl: 'carouselImages/osane_carousel.png',
     technologies: ['Wordpress', 'PHP', 'JQuery'],
   },
   {
@@ -81,7 +81,7 @@ export const projects = ref([
     description:
       'Web app featuring AI to treat admin documents. Helped on the project to develop new features, focusing on creating user-friendly and accessible software as part of my role as a Full Stack Developer.',
     pageName: 'Emeis',
-    logoUrl: 'logos/logo_emeis.png',
+    logoUrl: 'carouselImages/emeis_carousel.png',
     link: 'https://www.selego.co/en/use-cases/ia-generative-conformite-contrats',
     technologies: ['React', 'MongoDB', 'CleverCloud'],
   },
@@ -89,7 +89,7 @@ export const projects = ref([
     id: 9,
     title: 'Renting App',
     type: 'Web App',
-    logoUrl: 'logos/logo_rent_app.png',
+    logoUrl: 'carouselImages/rent_app_carousel.png',
     technologies: ['PowerApps', 'Sharepoint'],
   },
 ])
