@@ -1,4 +1,4 @@
-name: Build and Deploy via SFTP
+name: Build and Deploy
 on:
   push:
     branches:
@@ -17,7 +17,7 @@ jobs:
           npm run build
 
       - name: Deploy to IONOS
-        uses: wlixcc/SFTP-Deploy-Action@v1.0
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ${{ secrets.IONOS_FTP_SERVER }}
           username: ${{ secrets.IONOS_FTP_USERNAME }}
