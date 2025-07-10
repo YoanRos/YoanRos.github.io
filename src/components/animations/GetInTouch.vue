@@ -5,7 +5,7 @@ import IconLinkedin from '~icons/mdi/linkedin'
 </script>
 
 <template>
-  <div class="relative h-screen overflow-hidden bg-white">
+  
     <div class="h-full whitespace-nowrap animate-marquee absolute bottom-0">
       <span
         class="text-light-pink text-[20rem] cursor-default select-none md:text-[40rem] xl:text-[50rem] font-mrsSaint pr-8 md:pr-16"
@@ -60,7 +60,7 @@ import IconLinkedin from '~icons/mdi/linkedin'
         </div>
       </div>
     </div>
-  </div>
+
 </template>
 
 <style scoped>

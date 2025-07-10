@@ -8,7 +8,7 @@ const showMenu = ref(false)
 </script>
 <template>
   <div class="flex flex-col bg-white">
-    <div class="flex h-screen p-16">
+    <div class="flex h-screen p-16" id="Welcome">
       <div class="flex items-end">
         <h1
           class="lg:text-7xl md:text-7xl sm:text-6xl 2xl:text-9xl xl:text-8xl text-6xl font-groovy-orange leading-tight font-bold text-light-pink"
@@ -33,11 +33,13 @@ const showMenu = ref(false)
         <AnimatedFlower />
       </div>
     </div>
-    <div class="flex h-screen p-16 flex-col justify-between" id="work">
+    <div class="flex h-screen p-16 flex-col justify-between" id="Projects">
       <h3 class="heading3">Projects I contributed to</h3>
       <Projects />
     </div>
+<div class="relative h-screen overflow-hidden bg-white" id="Contact">
 
-    <GetInTouch />
+  <GetInTouch />
+</div>
   </div>
 </template>
